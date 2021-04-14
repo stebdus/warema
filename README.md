@@ -16,9 +16,6 @@ WMS WebControl pro: https://www.warema.com/en/control-systems/radio-systems/wms-
 ![WMS WebControl pro](./assets/WMS.png)
 
 ## Installation
-y
-
-## Configuration
 ### Upgrading from an old component version
 * Remove all configuration from Home Assistants config file `configuration.yaml`
 * Upgrade the component via HACS or manually replace the files in the custom_component folder (see install manually below)
@@ -39,16 +36,18 @@ Clone or copy the repository and copy the folder `homeassistant/custom_component
 * All available components and controls should be added automatically
 
 ### Configuration flow settings
-Use your "Warema WMS WebControl pro" credentials
+Use your "Warema WMS WebControl pro" credentials! Password will be converted to a Bearer access token for the interaction with the Warema API.
 * Username 
 * Password
 
 ## Exposed entities
 
 - `cover.warema_[YOUR-ENTITY-Name]` for each of your Warema window awnings
+Note: If you have configured an awning collection entitiy in your App, this will appear as an own cover entity in HA
 
 ## Limitations
-x
+Please be aware that at this time the plugin only adds and controls window awnings. Support for e.g. Raft-Stores is not implemented yet due to the lack of being able to test it.
 
 ## To be done
-1. c
+1. Parse room name from WMS and add it to HA
+2. Add preconfigured scenes
