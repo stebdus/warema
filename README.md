@@ -2,10 +2,14 @@
 
 
 # Description
-This platform plugin allows you to see and control window awnings / ZIP blinds from the manufacturer Warema (Warema.com). 
+This platform plugin allows you to control window awnings / ZIP blinds from the manufacturer Warema (Warema.com). 
 
 # Requirements
-You need to have a Warema BOX?? installed to your network and have enabled the cloud connect
+You need to have Warema "WMS WebControl pro" installed to your network and have enabled the cloud connect.
+"WMS WebControl pro" is a hardware for integrating a mobile end device into the WMS as an additional transmitter. It is operated by app or web browser. The system is operating at home directly via the WLAN network or with a worldwide access via optional cloud connection
+
+WMS WebControl pro: https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php
+
 
 # Installation
 y
