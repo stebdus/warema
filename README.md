@@ -43,6 +43,12 @@ Use your "Warema WMS WebControl pro" credentials
 * Username 
 * Password
 
+Go to the `Integrations pane` on your Home Assistant instance and search for `Sonos Alarm`.
+
+## Exposed entities
+
+- `switch.sonos_alarm_[id of your alarm]` for each of your SONOS Alarms
+
 ## Limitations
 x
 
