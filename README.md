@@ -6,10 +6,10 @@ This platform plugin allows you to control window awnings / ZIP blinds from the 
 The plugin controls your components via the Warema API.
 
 ## Requirements
-You need to have Warema "WMS WebControl pro" installed to your network and have enabled the cloud connect.
-"WMS WebControl pro" is a hardware for integrating a mobile end device into the WMS as an additional transmitter. It is operated by app or web browser. The system is operating at home directly via the WLAN network or with a worldwide access via optional cloud connection.
+You need to have Warema [WMS WebControl pro](https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php) installed to your network and have enabled the cloud connect.
+[WMS WebControl pro](https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php) is a hardware for integrating a mobile end device into the WMS as an additional transmitter. It is operated by app or web browser. The system is operating at home directly via the WLAN network or with a worldwide access via optional cloud connection.
 
-[Warema window awnings]: (https://www.warema.com/en/awning/window-awning.php)
+[Warema window awnings] (https://www.warema.com/en/awning/window-awning.php)
 <img src="./assets/ZIP-Example.jpg" alt="Warema window awning" width="75%">
 
 [WMS WebControl pro](https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php)
