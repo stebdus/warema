@@ -13,10 +13,33 @@ Warema window awnings: warema.com
 
 WMS WebControl pro: https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php
 ![WMS WebControl pro](./assets/WMS.png)
-![WMS WebControl Solution drawing](./assets/WMS-overview.jpg)
 
 ## Installation
 y
 
 ## Configuration
+### Upgrading from an old component version
+* Remove all configuration from Home Assistants config file configuration.yaml
+* Upgrade the component via HACS or manually replace the files in the custom_component folder (see install manually below)
+* Restart Home Assistant
+* Add the component again as per below (install + configuration)
+
+### Install with HACS (recommended)
+Do you you have [HACS](https://community.home-assistant.io/t/custom-component-hacs) installed? Just search for "Warema" and install it direct from HACS. HACS will keep track of updates and you can easly upgrade Warema to the latest version.
+
+### Install manually
+Make sure you have an account on your Warema WMS WebControl pro!
+
+Clone or copy the repository and copy the folder 'homeassistant/custom_component/warema' into '<config dir>/custom_components'
+
+## Configuration
+* Restart Home Assistant
+* Add and configure the component via the UI: Configuration > Integrations > search for "Warema" and follow the wizard to configure (use your Warema WMS WebControl pro credentials)
+* All available components and controls should be added automatically
+
+
+## Limitations
 x
+
+## To be done
+1. c
