@@ -48,6 +48,39 @@ Use your "Warema WMS WebControl pro" credentials! Password will be converted to 
 
 Note: If you have configured an awning collection entitiy in your App, this will appear as an own cover entity in HA
 
+## Automations
+
+Save these automations in your automations file `<config dir>/automations.yaml`
+
+### Close covers when the sun is shining and temperature is above 21°
+```yaml
+- id: notify_volkswagen_position_change
+  description: Notify when position has been changed
+  alias: VW position changed notification
+  trigger:
+    - platform: state
+      entity_id: device_tracker.vw_carid
+  action:
+    - service: notify.ios_my_ios_device
+      data_template:
+        title: "Passat GTE Position Changed"
+        message: |
+          🚗 VW Car is now on a new place.
+        data:
+          url: /lovelace/car
+          apns_headers:
+            'apns-collapse-id': 'car_position_state_{{ trigger.entity_id.split(".")[1] }}'
+          push:
+            category: map
+            thread-id: "HA Car Status"
+          action_data:
+            latitude: "{{trigger.from_state.attributes.latitude}}"
+            longitude: "{{trigger.from_state.attributes.longitude}}"
+            second_latitude: "{{trigger.to_state.attributes.latitude}}"
+            second_longitude: "{{trigger.to_state.attributes.longitude}}"
+            shows_traffic: true
+```
+
 ## Limitations
 Please be aware that at this time the plugin only adds and controls window awnings. Support for e.g. Raft-Stores is not implemented yet due to the lack of being able to test it.
 
