@@ -9,11 +9,11 @@ You need to have Warema "WMS WebControl pro" installed to your network and have 
 "WMS WebControl pro" is a hardware for integrating a mobile end device into the WMS as an additional transmitter. It is operated by app or web browser. The system is operating at home directly via the WLAN network or with a worldwide access via optional cloud connection
 
 Warema window awnings: warema.com
-![Warema window awning](./assets/ZIP-Example.jpeg) 
+![Warema window awning](./assets/ZIP-Example.jpg) 
 
 WMS WebControl pro: https://www.warema.com/en/control-systems/radio-systems/wms-webcontrol-pro.php
 ![WMS WebControl pro](./assets/WMS.png)
-![WMS WebControl Solution drawing](./assets/WMS-overview.jpeg)
+![WMS WebControl Solution drawing](./assets/WMS-overview.jpg)
 
 ## Installation
 y
