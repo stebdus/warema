@@ -43,6 +43,7 @@ Use your "Warema WMS WebControl pro" credentials! Password will be converted to 
 ## Exposed entities
 
 - `cover.warema_[YOUR-ENTITY-Name]` for each of your Warema window awnings
+
 Note: If you have configured an awning collection entitiy in your App, this will appear as an own cover entity in HA
 
 ## Limitations
