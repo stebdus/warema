@@ -20,22 +20,22 @@ y
 
 ## Configuration
 ### Upgrading from an old component version
-* Remove all configuration from Home Assistants config file configuration.yaml
+* Remove all configuration from Home Assistants config file `configuration.yaml`
 * Upgrade the component via HACS or manually replace the files in the custom_component folder (see install manually below)
 * Restart Home Assistant
 * Add the component again as per below (install + configuration)
 
 ### Install with HACS (recommended)
-Do you you have [HACS](https://community.home-assistant.io/t/custom-component-hacs) installed? Just search for "Warema" and install it direct from HACS. HACS will keep track of updates and you can easly upgrade Warema to the latest version.
+Do you you have [HACS](https://community.home-assistant.io/t/custom-component-hacs) installed? Just search for `Warema` and install it direct from HACS. HACS will keep track of updates and you can easly upgrade Warema to the latest version.
 
 ### Install manually
 Make sure you have an account on your Warema WMS WebControl pro!
 
-Clone or copy the repository and copy the folder 'homeassistant/custom_component/warema' into '<config dir>/custom_components'
+Clone or copy the repository and copy the folder `homeassistant/custom_component/warema` into `<config dir>/custom_components`
 
 ## Configuration
 * Restart Home Assistant
-* Add and configure the component via the UI: Configuration > Integrations > search for "Warema" and follow the wizard to configure (use your Warema WMS WebControl pro credentials)
+* Add and configure the component via the UI: `Configuration` > `Integrations` > search for `Warema` and follow the wizard to configure (use your Warema WMS WebControl pro credentials)
 * All available components and controls should be added automatically
 
 ### Configuration flow settings
@@ -43,11 +43,9 @@ Use your "Warema WMS WebControl pro" credentials
 * Username 
 * Password
 
-Go to the `Integrations pane` on your Home Assistant instance and search for `Sonos Alarm`.
-
 ## Exposed entities
 
-- `switch.sonos_alarm_[id of your alarm]` for each of your SONOS Alarms
+- `cover.warema_[YOUR-ENTITY-Name]` for each of your Warema window awnings
 
 ## Limitations
 x
