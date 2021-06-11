@@ -52,33 +52,34 @@ Note: If you have configured an awning collection entitiy in your App, this will
 
 Save these automations in your automations file `<config dir>/automations.yaml`
 
-### Close covers when the sun is shining and temperature is above 21°
+### Close covers when the sun is shining (above 50000 Lumen) and temperature is above 21°
 ```yaml
-- id: notify_volkswagen_position_change
-  description: Notify when position has been changed
-  alias: VW position changed notification
+- id: control_warema_awnings_sun_protection
+  alias: Control Warema Awnings (Sun protection)
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.temperature
+      above: 21
+    - platform: numeric_state
+      entity_id: sensor.lightLumen
+      above: 50000
+  action:
+    - service: scene.turn_on
+      entity_id: scene.sun_protection
+
+- id: control_warema_awnings_open
+  alias: Control Warema Awnings (Open)
   trigger:
     - platform: state
-      entity_id: device_tracker.vw_carid
+      entity_id: cover.warema_all
+      state: "closed"
+    - platform: numeric_state
+      entity_id: sensor.lightLumen
+      below: 50000
+      for: 30   # min
   action:
-    - service: notify.ios_my_ios_device
-      data_template:
-        title: "Passat GTE Position Changed"
-        message: |
-          🚗 VW Car is now on a new place.
-        data:
-          url: /lovelace/car
-          apns_headers:
-            'apns-collapse-id': 'car_position_state_{{ trigger.entity_id.split(".")[1] }}'
-          push:
-            category: map
-            thread-id: "HA Car Status"
-          action_data:
-            latitude: "{{trigger.from_state.attributes.latitude}}"
-            longitude: "{{trigger.from_state.attributes.longitude}}"
-            second_latitude: "{{trigger.to_state.attributes.latitude}}"
-            second_longitude: "{{trigger.to_state.attributes.longitude}}"
-            shows_traffic: true
+    - service: scene.turn_off
+      entity_id: scene.sun_protection
 ```
 
 ## Limitations
